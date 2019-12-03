@@ -31,6 +31,33 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtMarca;
         
         /// <summary>
+        /// Control txtProcesador.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtProcesador;
+        
+        /// <summary>
+        /// Control txtHDD.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtHDD;
+        
+        /// <summary>
+        /// Control txtFechaCompra.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFechaCompra;
+        
+        /// <summary>
         /// Control txtSerie.
         /// </summary>
         /// <remarks>
@@ -49,15 +76,6 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtModelo;
         
         /// <summary>
-        /// Control txtProcesador.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProcesador;
-        
-        /// <summary>
         /// Control txtRam.
         /// </summary>
         /// <remarks>
@@ -67,13 +85,13 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtRam;
         
         /// <summary>
-        /// Control txtFechaCompra.
+        /// Control txtMac.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFechaCompra;
+        protected global::System.Web.UI.WebControls.TextBox txtMac;
         
         /// <summary>
         /// Control txtFechaEntrega.
@@ -83,24 +101,6 @@ namespace CapaPresentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFechaEntrega;
-        
-        /// <summary>
-        /// Control txtFechaMantencion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFechaMantencion;
-        
-        /// <summary>
-        /// Control ddlEstado.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlEstado;
         
         /// <summary>
         /// Control btnRegistrar.
