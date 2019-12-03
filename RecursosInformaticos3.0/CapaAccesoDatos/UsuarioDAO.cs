@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaEntidades;
 using System.Data;
 using System.Data.SqlClient;
-using CapaEntidades;
 
 namespace CapaAccesoDatos
 {
@@ -41,7 +41,7 @@ namespace CapaAccesoDatos
                 if (dr.Read())
                 {
                     objUsuario = new Usuario();
-
+                    
                     objUsuario.User = dr["Usuario"].ToString();
                     objUsuario.Pass = dr["Contrasena"].ToString();
                 }
@@ -72,7 +72,8 @@ namespace CapaAccesoDatos
                 cmd.Parameters.AddWithValue("@prmName", objUsuario.Name);
                 cmd.Parameters.AddWithValue("@prmLastName", objUsuario.LastName);
                 cmd.Parameters.AddWithValue("@prmRol", objUsuario.Rol);
-                cmd.Parameters.AddWithValue("@prmMail", objUsuario.Mail);
+                cmd.Parameters.AddWithValue("@prmEmail", objUsuario.Mail);
+                cmd.Parameters.AddWithValue("@prmState", objUsuario.Estado);
                 cmd.Parameters.AddWithValue("@prmRut", objUsuario.Rut);
                 con.Open();
 
@@ -91,5 +92,75 @@ namespace CapaAccesoDatos
             }
             return response;
         }
+
+        public DataSet ListarPerfil()
+        {
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+            DataSet ds = null;
+            SqlDataAdapter da = null;
+            string sql = "SELECT * FROM Perfil";
+            try
+            {
+                con = Conexion.getInstance().ConexionBD();
+                con.Open();
+                cmd = new SqlCommand(sql, con);
+                da = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return ds;
+        }
+        public List<Usuario> ListarUsuarios()
+        {
+            List<Usuario> Lista = new List<Usuario>();
+            SqlConnection con = null;
+            SqlCommand cmd = null;
+            SqlDataReader dr = null;
+            try
+            {
+                con = Conexion.getInstance().ConexionBD();
+                cmd = new SqlCommand("spListarUsuario", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    // Crear objetos de tipo Usuario
+                    Usuario objUsuario = new Usuario();
+                    objUsuario.Rut = dr["Rut"].ToString();
+                    objUsuario.Name = dr["Nombre"].ToString();
+                    objUsuario.LastName = dr["Apellido"].ToString();
+                    objUsuario.Mail = dr["Email"].ToString();
+                    objUsuario.Rol = Convert.ToInt32(dr["Rol"].ToString());
+                    objUsuario.Pass = dr["Contraseña"].ToString();
+                    objUsuario.User = dr["Usuario"].ToString();
+                    //objPerfil.Descripcion= dr["Descripcion"].ToString();
+
+                    // añadir a la lista de objetos
+                    Lista.Add(objUsuario);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return Lista;
+        }
+
     }
+
 }

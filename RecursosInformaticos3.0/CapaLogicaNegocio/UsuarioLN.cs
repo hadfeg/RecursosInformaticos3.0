@@ -1,13 +1,15 @@
-﻿using CapaAccesoDatos;
-using CapaEntidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaEntidades;
+using CapaAccesoDatos;
+using System.Data;
 
 namespace CapaLogicaNegocio
 {
+
     public class UsuarioLN
     {
         #region "PATRON SINGLETON"
@@ -34,5 +36,42 @@ namespace CapaLogicaNegocio
                 throw ex;
             }
         }
+
+        public bool RegistrarUsuario(Usuario objUsuario)
+        {
+            try
+            {
+                return UsuarioDAO.getInstance().RegistrarUsuario(objUsuario);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        public DataSet ListarPerfil()
+        {
+            try
+            {
+                return UsuarioDAO.getInstance().ListarPerfil();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public List<Usuario> ListarUsuarios()
+        {
+            try
+            {
+                return UsuarioDAO.getInstance().ListarUsuarios();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

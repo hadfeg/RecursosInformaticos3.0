@@ -8,7 +8,7 @@ namespace CapaEntidades
 {
     public class Usuario
     {
-        public int Rut { get; set; }
+        public String Rut { get; set; }
         public String User { get; set; }
         public String Pass { get; set; }
         public String Name { get; set; }
@@ -18,9 +18,8 @@ namespace CapaEntidades
         public int Estado { get; set; }
 
 
-
         public Usuario() { }
-        public Usuario(int Rut, String User, String Pass, String Name, String LastName, int Rol, String Mail, int Estado)
+        public Usuario(String Rut, String User, String Pass, String Name, String LastName, int Rol, String Mail, int Estado)
         {
             this.Rut = Rut;
             this.User = User;
@@ -30,7 +29,7 @@ namespace CapaEntidades
             this.Rol = Rol;
             this.Mail = Mail;
             this.Estado = Estado;
-
+                       
         }
 
     }
