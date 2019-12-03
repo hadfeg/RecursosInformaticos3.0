@@ -4,12 +4,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "CapaPresentacion\CapaPresentacion.csproj", "{2F037BC2-A86E-4FA4-B09C-F454669FACDD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8B170D2F-4123-491B-953E-96B732589E8E} = {8B170D2F-4123-491B-953E-96B732589E8E}
+		{4409482F-27E3-4BE4-BE79-08EF1460BEF9} = {4409482F-27E3-4BE4-BE79-08EF1460BEF9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaAccesoDatos", "CapaAccesoDatos\CapaAccesoDatos.csproj", "{F4D0D4CE-038A-4593-9816-6327536C831F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4409482F-27E3-4BE4-BE79-08EF1460BEF9} = {4409482F-27E3-4BE4-BE79-08EF1460BEF9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidades", "CapaEntidades\CapaEntidades.csproj", "{4409482F-27E3-4BE4-BE79-08EF1460BEF9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaLogicaNegocio", "CapaLogicaNegocio\CapaLogicaNegocio.csproj", "{8B170D2F-4123-491B-953E-96B732589E8E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4409482F-27E3-4BE4-BE79-08EF1460BEF9} = {4409482F-27E3-4BE4-BE79-08EF1460BEF9}
+		{F4D0D4CE-038A-4593-9816-6327536C831F} = {F4D0D4CE-038A-4593-9816-6327536C831F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

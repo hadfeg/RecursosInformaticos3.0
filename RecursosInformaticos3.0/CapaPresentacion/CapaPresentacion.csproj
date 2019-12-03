@@ -6863,9 +6863,42 @@
     <Content Include="AdminLTE-2.4.0\plugins\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="AdminLTE-2.4.0\plugins\timepicker\bootstrap-timepicker.min.js" />
     <Content Include="AdminLTE-2.4.0\starter.html" />
+    <Content Include="GestionUsuarios.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="PanelGeneral.aspx" />
+    <Content Include="scripts\jquery-3.4.1.js" />
+    <Content Include="scripts\jquery-3.4.1.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionUsuarios.aspx.cs">
+      <DependentUpon>GestionUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionUsuarios.aspx.designer.cs">
+      <DependentUpon>GestionUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PanelGeneral.aspx.cs">
+      <DependentUpon>PanelGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PanelGeneral.aspx.designer.cs">
+      <DependentUpon>PanelGeneral.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -7524,6 +7557,7 @@
     <Content Include="AdminLTE-2.4.0\plugins\input-mask\phone-codes\phone-codes.json" />
     <Content Include="AdminLTE-2.4.0\README.md" />
     <Content Include="AdminLTE-2.4.0\yarn.lock" />
+    <Content Include="MasterPage.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -7537,6 +7571,16 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
+      <Project>{4409482f-27e3-4be4-be79-08ef1460bef9}</Project>
+      <Name>CapaEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaLogicaNegocio\CapaLogicaNegocio.csproj">
+      <Project>{8B170D2F-4123-491B-953E-96B732589E8E}</Project>
+      <Name>CapaLogicaNegocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
