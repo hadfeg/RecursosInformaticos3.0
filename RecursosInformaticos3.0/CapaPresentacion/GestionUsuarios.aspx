@@ -76,6 +76,58 @@
 
         <br />
     </section>
+
+
+    <script>
+            
+            function FormatoRut(rut,event){
+
+                           
+                            var valor = rut.value.replace('.','');
+                            valor = valor.replace('.','');
+                            valor = valor.replace('-',''); // rut sin puntos ni guion.                                      
+                            var cuerpo = valor.slice(0,-1);
+                            var digito_verificador = valor.slice(-1);
+           
+
+                                var primera_parte;
+                                var segunda_parte;
+                                var tercera_parte;
+                                var rut_salida;
+
+                                if (valor.length == 9) {
+
+                                  primera_parte = valor.substring(0,2);
+                                  segunda_parte = valor.substring(2,5);
+                                  tercera_parte = valor.substring(5,8);
+
+                                }else if(valor.length == 8){
+
+                                  primera_parte = valor.substring(0,1);
+                                  segunda_parte = valor.substring(1,4);
+                                  tercera_parte = valor.substring(4,7);
+
+                                }
+
+                                rut_salida = primera_parte + '.' + segunda_parte + '.' + tercera_parte
+                                            + '-' + digito_verificador;
+                                                                          
+                                if(event.keyCode == 9){
+
+                                    if(rut_salida.length == 11 || rut_salida.length == 12){
+
+                                        rut.value = rut_salida;
+
+                                    }
+                                }
+                            
+                                                                                                                                                                                                   
+              }
+
+    </script>
+
+
+
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
 </asp:Content>
