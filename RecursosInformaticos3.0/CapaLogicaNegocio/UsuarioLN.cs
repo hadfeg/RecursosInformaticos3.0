@@ -25,8 +25,8 @@ namespace CapaLogicaNegocio
         }
         #endregion
 
-        public Usuario AccesoSistema(String user, String pass)
-        {
+        public Usuario AccesoSistema(String user, String pass){
+
             try
             {
                 return UsuarioDAO.getInstance().AccesoSistema(user, pass);

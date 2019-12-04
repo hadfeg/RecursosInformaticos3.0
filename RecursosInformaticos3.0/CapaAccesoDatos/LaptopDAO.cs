@@ -38,8 +38,11 @@ namespace CapaAccesoDatos
                 cmd.Parameters.AddWithValue("@prmMac", objLaptop.MAC);
                 cmd.Parameters.AddWithValue("@prmMarca", objLaptop.Marca);
                 cmd.Parameters.AddWithValue("@prmModelo", objLaptop.Modelo);
-                cmd.Parameters.AddWithValue("@prmNombreEquipo", objLaptop.NombreLaptop);
+                cmd.Parameters.AddWithValue("@prmNombre", objLaptop.NombreLaptop);
                 cmd.Parameters.AddWithValue("@prmFechaCompra", objLaptop.FechaCompra);
+                cmd.Parameters.AddWithValue("@prmFechaEntrega", objLaptop.FechaEntrega);
+                cmd.Parameters.AddWithValue("@prmFechaUltimaMantencion", objLaptop.FechaUltimaMantencion);
+                cmd.Parameters.AddWithValue("@prmTeamViewerID", objLaptop.IDTeamviewer);
                 cmd.Parameters.AddWithValue("@prmProcesador", objLaptop.Procesador);
                 cmd.Parameters.AddWithValue("@prmTeamviewer", objLaptop.IDTeamviewer);
                 cmd.Parameters.AddWithValue("@prmRam", objLaptop.Ram);

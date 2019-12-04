@@ -49,13 +49,22 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtHDD;
         
         /// <summary>
-        /// Control txtFechaCompra.
+        /// Control txtMac.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFechaCompra;
+        protected global::System.Web.UI.WebControls.TextBox txtMac;
+        
+        /// <summary>
+        /// Control txtTeamViewerID.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTeamViewerID;
         
         /// <summary>
         /// Control txtSerie.
@@ -85,13 +94,13 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtRam;
         
         /// <summary>
-        /// Control txtMac.
+        /// Control txtFechaCompra.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMac;
+        protected global::System.Web.UI.WebControls.TextBox txtFechaCompra;
         
         /// <summary>
         /// Control txtFechaEntrega.
@@ -101,6 +110,15 @@ namespace CapaPresentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFechaEntrega;
+        
+        /// <summary>
+        /// Control txtFechaMantencion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFechaMantencion;
         
         /// <summary>
         /// Control btnRegistrar.

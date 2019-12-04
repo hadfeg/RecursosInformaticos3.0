@@ -38,12 +38,21 @@
                         <div class="form-group">
                             <asp:TextBox ID="txtHDD" runat="server" Text="" CssClass="form-control" placeholder="Ej: 100 GB"></asp:TextBox>
                         </div>
+
                         <div class="form-group">
-                            <label>FECHA DE COMPRA</label>
+                            <label>MAC</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtFechaCompra" TextMode="Date" runat="server" CssClass="form-control" type="date"></asp:TextBox>
+                            <asp:TextBox ID="txtMac" runat="server" Text="" CssClass="form-control" type="text" placeholder="Ej: F6-40-BB-06-5A-67"></asp:TextBox>
                         </div>
+
+                        <div class="form-group">
+                            <label>TEAM VIEWER ID</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txtTeamViewerID" runat="server" Text="" CssClass="form-control" type="text" placeholder="Ej: F6-40-BB-06-5A-67"></asp:TextBox>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -67,12 +76,13 @@
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txtRam" runat="server" Text="" CssClass="form-control" type="text" placeholder="Ej: 16 GB"></asp:TextBox>
+                        </div>                        
+
+                        <div class="form-group">
+                            <label>FECHA DE COMPRA</label>
                         </div>
                         <div class="form-group">
-                            <label>MAC</label>
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="txtMac" runat="server" Text="" CssClass="form-control" type="text" placeholder="Ej: F6-40-BB-06-5A-67"></asp:TextBox>
+                            <asp:TextBox ID="txtFechaCompra" TextMode="Date" runat="server" CssClass="form-control" type="date"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
@@ -81,10 +91,19 @@
                         <div class="form-group">
                             <asp:TextBox ID="txtFechaEntrega" TextMode="Date" runat="server" CssClass="form-control" type="date"></asp:TextBox>
                         </div>
+
+                        <div class="form-group">
+                            <label>FECHA DE ULTIMA MANTENCION</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txtFechaMantencion" TextMode="Date" runat="server" CssClass="form-control" type="date"></asp:TextBox>
+                        </div>  
+
+
                     </div>
                 </div>
             </div>               
-        
+        </div>
 
         <div align="center">
             <table>

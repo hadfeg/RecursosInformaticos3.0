@@ -11,12 +11,14 @@
             <div class="col-md-6 col-md-offset-3">
                 <div class="box box-primary">
                     <div class="box-body">
+
                         <div class="form-group">
                             <label>RUT</label>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txtRut" runat="server" Text="" CssClass="form-control" placeholder="Sin puntos ni guión"></asp:TextBox>
                         </div>
+
                         <div class="form-group">
                             <label>NOMBRES</label>
                         </div>
@@ -57,6 +59,7 @@
                 </div>
             </div>           
         </div>
+
         <div align="center">
             <table>
                 <tr>
@@ -70,6 +73,7 @@
                 </tr>
             </table>
         </div>
+
         <br />
     </section>
 </asp:Content>
