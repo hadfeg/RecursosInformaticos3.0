@@ -80,7 +80,7 @@
 
     <script>
             
-            function FormatoRut(rut,event){
+       function FormatoRut(rut,event){
 
                            
                             var valor = rut.value.replace('.','');
