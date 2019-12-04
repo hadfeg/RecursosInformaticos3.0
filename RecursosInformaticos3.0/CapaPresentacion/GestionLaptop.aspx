@@ -32,8 +32,7 @@
                             <asp:TextBox ID="txtProcesador" runat="server" Text="" CssClass="form-control" placeholder="Ej: Intel Core i8"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label>HDD</label>
-                            <br />
+                            <label>HDD</label>                            
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txtHDD" runat="server" Text="" CssClass="form-control" placeholder="Ej: 100 GB"></asp:TextBox>
@@ -50,9 +49,8 @@
                             <label>TEAM VIEWER ID</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtTeamViewerID" runat="server" Text="" CssClass="form-control" type="text" placeholder="Ej: F6-40-BB-06-5A-67"></asp:TextBox>
-                        </div>
-                        
+                            <asp:TextBox ID="txtTeamViewerID" runat="server" Text="" CssClass="form-control" type="text" placeholder="Ej: 1475154154"></asp:TextBox>
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -63,13 +61,13 @@
                             <label>SERIE</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtSerie" runat="server" Text="" CssClass="form-control" onkeydown="FormatoRut(this,event)" placeholder="Ingrese Serie"></asp:TextBox>
+                            <asp:TextBox ID="txtSerie" runat="server" Text="" CssClass="form-control" placeholder="Ingrese Serie"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label>MODELO</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtModelo" runat="server" Text="" CssClass="form-control" onkeydown="FormatoRut(this,event)" placeholder="Ingrese modelo"></asp:TextBox>
+                            <asp:TextBox ID="txtModelo" runat="server" Text="" CssClass="form-control" placeholder="Ingrese modelo"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label>RAM</label>
