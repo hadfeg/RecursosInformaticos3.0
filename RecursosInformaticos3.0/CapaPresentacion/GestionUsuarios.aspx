@@ -16,7 +16,7 @@
                             <label>RUT</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtRut" runat="server" Text="" CssClass="form-control" placeholder="Sin puntos ni guión"></asp:TextBox>
+                            <asp:TextBox ID="txtRut" runat="server" onkeydown ="FormatoRut(this,event)" Text="" CssClass="form-control" placeholder="Sin puntos ni guión"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
@@ -77,10 +77,9 @@
         <br />
     </section>
 
-
     <script>
             
-            function FormatoRut(rut,event){
+       function FormatoRut(rut,event){
 
                            
                             var valor = rut.value.replace('.','');
