@@ -6865,6 +6865,7 @@
     <Content Include="AdminLTE-2.4.0\starter.html" />
     <Content Include="GestionLaptop.aspx" />
     <Content Include="GestionUsuarios.aspx" />
+    <Content Include="ListadoUsuario.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="PanelGeneral.aspx" />
     <Content Include="scripts\jquery-3.4.1.js" />
@@ -6885,6 +6886,13 @@
     </Compile>
     <Compile Include="GestionUsuarios.aspx.designer.cs">
       <DependentUpon>GestionUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoUsuario.aspx.cs">
+      <DependentUpon>ListadoUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListadoUsuario.aspx.designer.cs">
+      <DependentUpon>ListadoUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

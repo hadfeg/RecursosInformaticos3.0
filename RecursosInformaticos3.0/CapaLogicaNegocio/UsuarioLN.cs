@@ -24,7 +24,6 @@ namespace CapaLogicaNegocio
             return lnUsuario;
         }
         #endregion
-
         public Usuario AccesoSistema(String user, String pass){
 
             try

@@ -22,6 +22,13 @@
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"/>
 
+    <style type="text/css">
+        #form1 {
+            height: 165px;
+            width: 404px;
+        }
+    </style>
+
 </head>
 <body class="hold-transition login-page">
     <div class="login-box">
@@ -36,11 +43,10 @@
                     <asp:Login ID="Login1" runat="server" OnAuthenticate="Login_Authenticate" EnableViewState="false" Width="100%">
                         <LayoutTemplate>
                             <div class="form-group has-feedback">
-                                <asp:TextBox ID="UserName" runat="server" class="form-control" placeholder="Email"></asp:TextBox>
-                                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                                <asp:TextBox ID="UserName" runat="server" class="form-control" placeholder="Email" Height="23px" OnTextChanged="UserName_TextChanged" Width="171px"></asp:TextBox>
                             </div>
                             <div class="form-group has-feedback">
-                                <asp:TextBox ID="Password" runat="server" type="password" class="form-control" placeholder="Password"></asp:TextBox>
+                                <asp:TextBox ID="Password" runat="server" type="password" class="form-control" placeholder="Password" Height="23px" Width="232px"></asp:TextBox>
                                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                             </div>
                             <div class="row">

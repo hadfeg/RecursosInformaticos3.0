@@ -39,6 +39,7 @@ namespace CapaPresentacion
             //int NivelAcceso = Convert.ToInt32(rbNivelAcceso.SelectedValue);
             Laptop objLaptop = new Laptop();
 
+            objLaptop.Rut_Usuario = txtRut.Text;
             objLaptop.Serie = txtSerie.Text;
             objLaptop.Marca = txtMarca.Text;
             objLaptop.Modelo = txtModelo.Text;
@@ -50,6 +51,11 @@ namespace CapaPresentacion
             objLaptop.FechaCompra = Convert.ToDateTime(txtFechaCompra.Text);
             objLaptop.FechaEntrega = Convert.ToDateTime(txtFechaEntrega.Text);
             objLaptop.FechaUltimaMantencion = Convert.ToDateTime(txtFechaMantencion.Text);
+            objLaptop.Estado = txtEstado.Text;
+            objLaptop.Opcional = txtOpcional.Text;
+            objLaptop.Comentario = txtComentario.Text;            
+            objLaptop.SistOperativo = txtSO.Text;
+            objLaptop.HDD = Convert.ToInt32(txtHDD.Text);
             /**
             if (NivelAcceso == 1)
             {
