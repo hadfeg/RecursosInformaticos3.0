@@ -24,9 +24,8 @@ namespace CapaAccesoDatos
         public SqlConnection ConexionBD()
         {
             SqlConnection conexion = new SqlConnection();
-            conexion.ConnectionString = @"Data Source= 192.168.6.170; Initial Catalog=BD-RECURSOSTI; User ID=sa; Password=3192yahima; MultipleActiveResultSets = True";
-            //conexion.ConnectionString = @"Data Source= DESKTOP-AN7T78K; Initial Catalog=BD-RECURSOSTI; User ID=sa; Password=chirino123; MultipleActiveResultSets = True"
-;            return conexion;
+            //conexion.ConnectionString = @"Data Source= 192.168.6.170; Initial Catalog=BD-RECURSOSTI; User ID=sa; Password=3192yahima; MultipleActiveResultSets = True";
+            conexion.ConnectionString = @"Data Source= DESKTOP-AN7T78K; Initial Catalog=BD-RECURSOSTI; User ID=sa; Password=chirino123; MultipleActiveResultSets = True";            return conexion;
         }
 
     }

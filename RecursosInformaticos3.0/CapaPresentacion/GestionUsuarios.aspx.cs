@@ -17,15 +17,16 @@ namespace CapaPresentacion
 
         }
 
-        protected void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            Usuario objUsuario = new Usuario();
-            objUsuario = GetEntity();
-            bool response = UsuarioLN.getInstance().RegistrarUsuario(objUsuario);
+        protected void btnRegistrar_Click(object sender, EventArgs e) {
 
+            Usuario objUsuario = new Usuario();
+            objUsuario = GetEntity();           
             bool rut_valido = validarRut(objUsuario);
 
             if (rut_valido) {
+
+                bool response = UsuarioLN.getInstance().RegistrarUsuario(objUsuario);
+
                 if (response == true)
                 {
                     Response.Write("<script>alert('REGISTRO CORRECTO.')</script>");
