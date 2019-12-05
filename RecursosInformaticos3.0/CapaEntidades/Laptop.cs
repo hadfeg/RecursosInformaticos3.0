@@ -17,16 +17,15 @@ namespace CapaEntidades
         public int HDD { get; set; }
         public int IDTeamviewer { get; set; }
         public DateTime FechaCompra { get; set; }
-        public DateTime FechaEntrega { get; set; }
+        public DateTime FechaEntrega { get; set; }      
         public DateTime FechaUltimaMantencion { get; set; }
+        //public DateTime FechaSiguienteMantencion { get; set; }
         public String Opcional { get; set; }
         public String Comentario { get; set; }
         public String Estado { get; set; }
         public String MAC { get; set; }
-        public String Rut { get; set; }
-        public String Empresa { get; set; }
-        public String Departamento { get; set; }
-        public String Cargo { get; set; }
+        public String SistOperativo { get; set; }
+        public String Rut_Usuario { get; set; }       
         public Laptop() { }
     }
 }
