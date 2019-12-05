@@ -8,17 +8,15 @@
     </section>
     <section class="content">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-6">
                 <div class="box box-primary">
                     <div class="box-body">
-
                         <div class="form-group">
                             <label>RUT</label>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txtRut" runat="server" onkeydown ="FormatoRut(this,event)" Text="" CssClass="form-control" placeholder="Sin puntos ni guión"></asp:TextBox>
                         </div>
-
                         <div class="form-group">
                             <label>NOMBRES</label>
                         </div>
@@ -30,6 +28,31 @@
                         <div class="form-group">
                             <asp:TextBox ID="txtApellido" runat="server" Text="" CssClass="form-control" placeholder="Ej: Fernández"></asp:TextBox>
                         </div>
+                        
+                        <div class="form-group">
+                            <label>E-MAIL</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" type="email" placeholder="Ej: nombre@gmail.cl"></asp:TextBox>
+                        </div>                       
+                    </div>
+                </div>
+            </div>   
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label>EMPRESA</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:DropDownList ID="ddlEmpresa" runat="server" CssClass="form-control"></asp:DropDownList>
+                        </div>
+                        <div class="form-group">
+                            <label>DEPARTAMENTO</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:DropDownList ID="ddlDepartamento" runat="server" CssClass="form-control"></asp:DropDownList>
+                        </div>
                         <div class="form-group">
                             <label>USUARIO</label>
                         </div>
@@ -40,26 +63,29 @@
                             <label>CONTRASEÑA</label>
                         </div>
                         <div class="form-group">
-                             <asp:TextBox ID="txtContrasena" runat="server" Text="" CssClass="form-control" type="password"  placeholder="Password"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label>E-MAIL</label>
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" type="email" placeholder="Ej: nombre@gmail.cl"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label>PERFIL</label>
-                        </div>                        
-                        <div class="form-group">
-                            <asp:DropDownList ID="ddlPerfil" runat="server" CssClass="form-control">               
-                            </asp:DropDownList>
+                            <asp:TextBox ID="txtContrasena" runat="server" Text="" CssClass="form-control" type="password" placeholder="Password"></asp:TextBox>
                         </div>
                     </div>
                 </div>
-            </div>           
+            </div>
+            <div class="col-md-12">            
+                <div class="box-body">
+                    <div class="box ">
+                        <div class="form-group" align="center">
+                            <label>PERFIL</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:RadioButtonList ID="rblPerfil" runat="server" RepeatDirection="Horizontal" align="center" CellPadding="8">
+                                <asp:ListItem Value="1" Selected="True">Usuario</asp:ListItem>
+                                <asp:ListItem Value="2">Gerencial</asp:ListItem>
+                                <asp:ListItem Value="3">Administradores de áreas</asp:ListItem>
+                                <asp:ListItem Value="4">Administrador General</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
         <div align="center">
             <table>
                 <tr>
