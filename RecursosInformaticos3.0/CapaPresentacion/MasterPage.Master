@@ -231,6 +231,20 @@
             <li><a href="AdminLTE-2.4.0/index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>
         </li>
+           <li class="treeview">
+              <a href="#">
+                  <i class="fa fa-users"></i><span>Gestión de Usuarios</span>
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+              </a>
+              <ul class="treeview-menu">
+                  <li><a href="GestionUsuarios.aspx"><i class="fa fa-user-plus"></i>Nuevo Usuario</a></li>
+                  <li><a href="ListadoUsuario.aspx"><i class="fa fa-list"></i>Listado de Usuarios</a></li>
+                  <li><a href="GestionPerfil.aspx"><i class="fa fa-lock"></i>Nuevo Perfil</a></li>
+                  <li><a href="ListadoPerfil.aspx"><i class="fa fa-list-alt"></i>Listado de Perfiles</a></li>
+              </ul>
+          </li>
           <li class="treeview">
               <a href="#">
                   <i class="fa fa-laptop"></i><span>Recursos Informáticos</span>
@@ -243,22 +257,7 @@
                   <li><a href="GestionPerfil.aspx"><i class="fa fa-mobile"></i>Nuevo Celular</a></li>
                   <li><a href="ListadoUsuario.aspx"><i class="fa  fa-print"></i>Nuevo Recurso</a></li>
               </ul>
-          </li>
-                    <li class="treeview">
-          <a href="#">
-            <i class="fa fa-users"></i> <span>Gestión de Usuarios</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-              <ul class="treeview-menu">                  
-                  <li><a href="GestionUsuarios.aspx"><i class="fa fa-user-plus"></i>Nuevo Usuario</a></li> 
-                  <li><a href="ListadoUsuario.aspx"><i class="fa fa-list"></i>Listado de Usuarios</a></li>
-                  <li><a href="GestionPerfil.aspx"><i class="fa fa-lock"></i>Nuevo Perfil</a></li>                  
-                  <li><a href="ListadoPerfil.aspx"><i class="fa fa-list-alt"></i>Listado de Perfiles</a></li>
-              </ul>             
-              
-      </li>
+          </li>         
         <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
