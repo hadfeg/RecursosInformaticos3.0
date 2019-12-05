@@ -8,10 +8,9 @@
     </section>
     <section class="content">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-6">
                 <div class="box box-primary">
                     <div class="box-body">
-
                         <div class="form-group">
                             <label>RUT</label>
                         </div>
@@ -33,8 +32,35 @@
                         <div class="form-group">
                             <asp:TextBox ID="txtApellido" runat="server" Text="" CssClass="form-control" placeholder="Ej: Fernández"></asp:TextBox>
                         </div>
-
                         <div class="form-group">
+                            <label>E-MAIL</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" type="email" placeholder="Ej: nombre@gmail.cl"></asp:TextBox>
+                            <asp:RegularExpressionValidator runat="server" ID="RegularExpressionValidator" ControlToValidate="txtEmail" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                                Display="Dynamic" ErrorMessage="Correo inválido"></asp:RegularExpressionValidator>
+
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmail" ForeColor="Red" Display="Dynamic" ErrorMessage="Campo Obligatorio"></asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label>EMPRESA</label>
+                            </div>
+                            <div class="form-group">
+                                <asp:DropDownList ID="ddlEmpresa" runat="server" CssClass="form-control"></asp:DropDownList>
+                            </div>
+                            <div class="form-group">
+                                <label>DEPARTAMENTO</label>
+                            </div>
+                            <div class="form-group">
+                                <asp:DropDownList ID="ddlDepartamento" runat="server" CssClass="form-control"></asp:DropDownList>
+                            </div>
                             <label>USUARIO</label>
                         </div>
                         <div class="form-group">
@@ -45,45 +71,29 @@
                             <label>CONTRASEÑA</label>
                         </div>
                         <div class="form-group">
-                             <asp:TextBox ID="txtContrasena" runat="server" Text="" CssClass="form-control" type="password"  placeholder="Password"></asp:TextBox>
-                        </div>                                                
-
-                        <div class="form-group">
-                            <label>E-MAIL</label>
+                            <asp:TextBox ID="txtContrasena" runat="server" Text="" CssClass="form-control" type="password" placeholder="Password"></asp:TextBox>
                         </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" type="email" placeholder="Ej: nombre@gmail.cl"></asp:TextBox>                                                        
-                            <asp:RegularExpressionValidator runat ="server" ID="RegularExpressionValidator" ControlToValidate="txtEmail" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
-                            Display = "Dynamic" ErrorMessage = "Correo inválido"></asp:RegularExpressionValidator>
-
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmail" ForeColor="Red" Display = "Dynamic" ErrorMessage = "Campo Obligatorio"></asp:RequiredFieldValidator>
-                        </div>
-                        <div class="form-group">
-                            <label>PERFIL</label>
-                        </div>                        
-                        <div class="form-group">
-                            <asp:DropDownList ID="ddlPerfil" runat="server" CssClass="form-control">     
-                                
-                                    <asp:ListItem Text="Perfil 1" Value="1" Selected="False"></asp:ListItem>
-                                    <asp:ListItem Text="Perfil 2" Value="2" Selected="False"></asp:ListItem>
-
-                            </asp:DropDownList>
-                        </div>
-
-                        <div class="form-group">
-                                <label>ESTADO </label>
-                        </div>
-                        <div class="form-group">
-                                <asp:DropDownList ID="ddlEstado" runat="server" CssClass="form-control">                                    
-                                    <asp:ListItem Text="Estado 1" Value="1" Selected="False"></asp:ListItem>
-                                    <asp:ListItem Text="Estado 2" Value="2" Selected="False"></asp:ListItem>
-                                </asp:DropDownList>
-                        </div>                      
                     </div>
                 </div>
-            </div>           
+            </div>
+            <div class="col-md-12">
+                <div class="box-body">
+                    <div class="box ">
+                        <div class="form-group" align="center">
+                            <label>PERFIL</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:RadioButtonList ID="rblPerfil" runat="server" RepeatDirection="Horizontal" align="center" CellPadding="8">
+                                <asp:ListItem Value="1" Selected="True">Usuario</asp:ListItem>
+                                <asp:ListItem Value="2">Gerencial</asp:ListItem>
+                                <asp:ListItem Value="3">Administradores de Áreas</asp:ListItem>
+                                <asp:ListItem Value="4">Administrador General</asp:ListItem>
+                            </asp:RadioButtonList>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
         <div align="center">
             <table>
                 <tr>
@@ -97,7 +107,6 @@
                 </tr>
             </table>
         </div>
-
         <br />
 
         <script language="javascript">
@@ -206,11 +215,6 @@
     
     </script>
 </section>
-
-
-
-
-
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
 </asp:Content>
