@@ -16,7 +16,8 @@
                             <label>RUT</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtRut" runat="server" onkeydown ="FormatoRut(this,event)" Text="" CssClass="form-control" placeholder="Ej: 12.345.678-9"></asp:TextBox>
+                            <asp:TextBox ID="txtRut" onkeydown="FormatoRut(this,event)" runat="server" Text="" CssClass="form-control" placeholder="Ej: 12.345.678-9"></asp:TextBox>
+                            <asp:CustomValidator ID="validadorRut" runat="server" ForeColor="Red" ClientValidationFunction="validarRut" ControlToValidate="txtRut" Display="Dynamic" ErrorMessage="RUT/RUN incorrecto, ingrese nuevamente !!!!" SetFocusOnError="True"></asp:CustomValidator>
                         </div>
 
                         <div class="form-group">
@@ -27,7 +28,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label>APELLIDOS</label></div>
+                            <label>APELLIDOS</label>
+                        </div>
                         <div class="form-group">
                             <asp:TextBox ID="txtApellido" runat="server" Text="" CssClass="form-control" placeholder="Ej: Fernández"></asp:TextBox>
                         </div>
@@ -38,17 +40,23 @@
                         <div class="form-group">
                             <asp:TextBox ID="txtUsuario" runat="server" Text="" CssClass="form-control" placeholder="Usuario"></asp:TextBox>
                         </div>
+
                         <div class="form-group">
                             <label>CONTRASEÑA</label>
                         </div>
                         <div class="form-group">
                              <asp:TextBox ID="txtContrasena" runat="server" Text="" CssClass="form-control" type="password"  placeholder="Password"></asp:TextBox>
-                        </div>
+                        </div>                                                
+
                         <div class="form-group">
                             <label>E-MAIL</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" type="email" placeholder="Ej: nombre@gmail.cl"></asp:TextBox>
+                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" type="email" placeholder="Ej: nombre@gmail.cl"></asp:TextBox>                                                        
+                            <asp:RegularExpressionValidator runat ="server" ID="RegularExpressionValidator" ControlToValidate="txtEmail" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                            Display = "Dynamic" ErrorMessage = "Correo inválido"></asp:RegularExpressionValidator>
+
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmail" ForeColor="Red" Display = "Dynamic" ErrorMessage = "Campo Obligatorio"></asp:RequiredFieldValidator>
                         </div>
                         <div class="form-group">
                             <label>PERFIL</label>
@@ -65,13 +73,12 @@
                         <div class="form-group">
                                 <label>ESTADO </label>
                         </div>
-                            <div class="form-group">
+                        <div class="form-group">
                                 <asp:DropDownList ID="ddlEstado" runat="server" CssClass="form-control">                                    
                                     <asp:ListItem Text="Estado 1" Value="1" Selected="False"></asp:ListItem>
                                     <asp:ListItem Text="Estado 2" Value="2" Selected="False"></asp:ListItem>
                                 </asp:DropDownList>
-                            </div>
-
+                        </div>                      
                     </div>
                 </div>
             </div>           
@@ -93,65 +100,66 @@
 
         <br />
 
-        <script language="javascript" type="text/javascript">
-	
-            function validarRut() {
+        <script language="javascript">
 
-                         var valor = document.getElementById("txtRut").value;
-                         //window.alert(valor);
-                         valor = valor.replace('.','');
-                         valor = valor.replace('.','');
-                         valor = valor.replace('-',''); 
+            function validarRut(source,arguments) {
+
+                 var valor = document.getElementById("<%= txtRut.ClientID %>").value;
+                 //var valor = arguments.value;
+                 //window.alert(valor);
+                 valor = valor.replace('.','');
+                 valor = valor.replace('.','');
+                 valor = valor.replace('-',''); 
 		
-                         var suma = 0;
-                         var iterador =2;
-                         var index = 0;
-                         var cuerpo = valor.slice(0,-1);             
-                         var digito_verificador = valor.slice(-1);        
+                 var suma = 0;
+                 var iterador =2;
+                 var index = 0;
+                 var cuerpo = valor.slice(0,-1);             
+                 var digito_verificador = valor.slice(-1);        
 
-                         for( i = (cuerpo.length - 1); i >= 0; i-- ) {
+                 for( i = (cuerpo.length - 1); i >= 0; i-- ) {
 
-                               index = iterador*cuerpo[i];
-                               suma = suma + index;
-                               iterador++;
+                       index = iterador*cuerpo[i];
+                       suma = suma + index;
+                       iterador++;
 
-                               if(iterador > 7){
-                                  iterador = 2;
-                               }
-                          }
+                       if(iterador > 7){
+                          iterador = 2;
+                       }
+                  }
 				
-                          //window.alert(suma);
-                          dvEsperado = 11 - (suma % 11);
+                  //window.alert(suma);
+                  dvEsperado = 11 - (suma % 11);
               
-                          if(digito_verificador == "K"){
+                  if(digito_verificador == "K"){
               
-              		            resto = 10;
+              		    resto = 10;
               
-                          }else if(digito_verificador == 0){
+                  }else if (digito_verificador == 0){
               
-              		            resto = 11;
+              		    resto = 11;
               
-                          }else{
+                  }else{
               
-              		            resto = digito_verificador;
-                          }
+              		    resto = digito_verificador;
+                  }
               
-			              //window.alert(dvEsperado);
+			      //window.alert(dvEsperado);
               
-                          if(dvEsperado != resto) {                                                                   
-                              //window.alert("Rut inválido :/");
-                              return false;
-                          }else{
-                              //window.alert("Rut válido");
-                              return true;
-                          }
+                  if(dvEsperado != resto) {                                                                   
+                      //window.alert("Rut malo bro :/");
+                      arguments.IsValid = false;
+                  }else{
+                      //window.alert("Rut válido amigazoooooooooooooo");
+                      arguments.IsValid = true;
+                  }
 
 
-            }
-
+            }     
+	           
               function FormatoRut(rut,event){
                       
-                              var valor = rut.value.replace('.','');
+                         var valor = rut.value.replace('.','');
                               valor = valor.replace('.','');
                               valor = valor.replace('-',''); // rut sin puntos ni guion.
                       
@@ -184,14 +192,14 @@
                                     if(rut_salida.length == 11 || rut_salida.length == 12){
 
                                             rut.value = rut_salida;
-                                            var valido = validarRut();
+                                            /*var valido = validarRut();
 
                                             if(!valido){
 
                                                Window.alert('Estimado@, ha ingresado un rut inválido, por favor intente nuevamente !!!!');
 
                                             }
-
+                                            */
                                     }
                               }
               }

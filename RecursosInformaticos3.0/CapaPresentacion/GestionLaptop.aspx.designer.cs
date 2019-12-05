@@ -13,6 +13,24 @@ namespace CapaPresentacion {
     public partial class GestionarLaptop {
         
         /// <summary>
+        /// Control txtRut.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRut;
+        
+        /// <summary>
+        /// Control validadorRut.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator validadorRut;
+        
+        /// <summary>
         /// Control txtNombreEquipo.
         /// </summary>
         /// <remarks>
@@ -58,6 +76,15 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtMac;
         
         /// <summary>
+        /// Control txtEstado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEstado;
+        
+        /// <summary>
         /// Control txtTeamViewerID.
         /// </summary>
         /// <remarks>
@@ -94,6 +121,15 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtRam;
         
         /// <summary>
+        /// Control txtSO.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSO;
+        
+        /// <summary>
         /// Control txtFechaCompra.
         /// </summary>
         /// <remarks>
@@ -119,6 +155,24 @@ namespace CapaPresentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFechaMantencion;
+        
+        /// <summary>
+        /// Control txtComentario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtComentario;
+        
+        /// <summary>
+        /// Control txtOpcional.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtOpcional;
         
         /// <summary>
         /// Control btnRegistrar.
