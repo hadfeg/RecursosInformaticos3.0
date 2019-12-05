@@ -44,11 +44,6 @@ namespace CapaPresentacion
                 // Response.Write("<script>alert('Usuarios Incorrecto')</script>");
              } 
            
-        }
-
-        protected void UserName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        }        
     }
 }
