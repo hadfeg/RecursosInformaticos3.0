@@ -7614,7 +7614,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1757</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1757/</IISUrl>
+          <IISUrl>http://localhost:27088/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
