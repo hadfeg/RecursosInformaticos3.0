@@ -39,11 +39,11 @@ namespace CapaPresentacion
             //int NivelAcceso = Convert.ToInt32(rbNivelAcceso.SelectedValue);
             Laptop objLaptop = new Laptop();
            
-            objLaptop.Serie = txtSerie.Text;
+            //objLaptop.Serie = txtSerie.Text;
             objLaptop.Marca = txtMarca.Text;
             objLaptop.Modelo = txtModelo.Text;
             objLaptop.Ram = txtRam.Text;
-            objLaptop.NombreLaptop = txtNombreEquipo.Text;
+           // objLaptop.NombreLaptop = txtNombreEquipo.Text;
             objLaptop.Procesador = txtProcesador.Text;
             objLaptop.MAC = txtMac.Text;
             objLaptop.IDTeamviewer = Convert.ToInt32(txtTeamViewerID.Text);
