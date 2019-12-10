@@ -44,6 +44,8 @@ namespace CapaAccesoDatos
                     
                     objUsuario.User = dr["Usuario"].ToString();
                     objUsuario.Pass = dr["Contrasena"].ToString();
+                    objUsuario.UsrImage = dr["UsrImg"].ToString();
+                    objUsuario.Rut = dr["Rut"].ToString();
                 }
             }
             catch (Exception ex)
@@ -75,7 +77,8 @@ namespace CapaAccesoDatos
                 cmd.Parameters.AddWithValue("@prmEmail", objUsuario.Mail);
                 cmd.Parameters.AddWithValue("@prmState", objUsuario.Estado);
                 cmd.Parameters.AddWithValue("@prmRut", objUsuario.Rut);
-                con.Open();
+                cmd.Parameters.AddWithValue("@prmUsrImg", objUsuario.UsrImage);
+                con.Open();                
 
                 int filas = cmd.ExecuteNonQuery();
                 if (filas > 0) response = true;
@@ -93,15 +96,14 @@ namespace CapaAccesoDatos
             return response;
         }
 
-        public DataSet ListarPerfil()
-        {
+        public DataSet ListarPerfil(){
+            
             SqlConnection con = null;
             SqlCommand cmd = null;
             DataSet ds = null;
             SqlDataAdapter da = null;
             string sql = "SELECT * FROM Perfil";
-            try
-            {
+            try{
                 con = Conexion.getInstance().ConexionBD();
                 con.Open();
                 cmd = new SqlCommand(sql, con);
@@ -121,6 +123,7 @@ namespace CapaAccesoDatos
         }
         public List<Usuario> ListarUsuarios()
         {
+
             List<Usuario> Lista = new List<Usuario>();
             SqlConnection con = null;
             SqlCommand cmd = null;
@@ -128,7 +131,7 @@ namespace CapaAccesoDatos
             try
             {
                 con = Conexion.getInstance().ConexionBD();
-                cmd = new SqlCommand("spListarUsuario", con);
+                cmd = new SqlCommand("spListarUsuarios", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 con.Open();
                 dr = cmd.ExecuteReader();
@@ -141,11 +144,9 @@ namespace CapaAccesoDatos
                     objUsuario.Name = dr["Nombre"].ToString();
                     objUsuario.LastName = dr["Apellido"].ToString();
                     objUsuario.Mail = dr["Email"].ToString();
-                    objUsuario.Rol = Convert.ToInt32(dr["Rol"].ToString());
-                    objUsuario.Pass = dr["Contraseña"].ToString();
+                    objUsuario.Rol = Convert.ToInt32(dr["Rol"].ToString());                 
                     objUsuario.User = dr["Usuario"].ToString();
                     //objPerfil.Descripcion= dr["Descripcion"].ToString();
-
                     // añadir a la lista de objetos
                     Lista.Add(objUsuario);
                 }

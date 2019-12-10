@@ -39,7 +39,6 @@
                             <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" type="email" placeholder="Ej: nombre@gmail.cl"></asp:TextBox>
                             <asp:RegularExpressionValidator runat="server" ID="RegularExpressionValidator" ControlToValidate="txtEmail" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
                                 Display="Dynamic" ErrorMessage="Correo inválido"></asp:RegularExpressionValidator>
-
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmail" ForeColor="Red" Display="Dynamic" ErrorMessage="Campo Obligatorio"></asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -64,7 +63,7 @@
                             <label>USUARIO</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtUsuario" runat="server" Text="" CssClass="form-control" placeholder="Usuario"></asp:TextBox>
+                            <asp:TextBox ID="txtUsuario" runat="server" Text="" CssClass="form-control" placeholder="Ej: AFARIAS"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
@@ -79,21 +78,34 @@
             <div class="col-md-12">
                 <div class="box-body">
                     <div class="box ">
+                        <br />
                         <div class="form-group" align="center">
                             <label>PERFIL</label>
                         </div>
                         <div class="form-group">
-                            <asp:RadioButtonList ID="rblPerfil" runat="server" RepeatDirection="Horizontal" align="center" CellPadding="8">
+                            <asp:RadioButtonList ID="ddlPerfil" runat="server" RepeatDirection="Horizontal" align="center" CellPadding="8">
                                 <asp:ListItem Value="1" Selected="True">Usuario</asp:ListItem>
                                 <asp:ListItem Value="2">Gerencial</asp:ListItem>
                                 <asp:ListItem Value="3">Administradores de Áreas</asp:ListItem>
                                 <asp:ListItem Value="4">Administrador General</asp:ListItem>
                             </asp:RadioButtonList>
                         </div>
+                        <br />
+                        <div class="form-group" align="center">
+                            <label>IMÁGEN DE USUARIO</label>
+                        </div>
+                        <div class="form-group" align="center">
+                            <asp:FileUpload ID="UsrImg" runat="server" width="400px" CssClass ="form-control"/>
+                        </div>
+
+                        <br />
                     </div>
                 </div>
             </div>
         </div>
+
+        
+
         <div align="center">
             <table>
                 <tr>
@@ -108,6 +120,8 @@
             </table>
         </div>
         <br />
+
+        <asp:Label ID = "LabUploadMessage" runat="server"></asp:Label>
 
         <script language="javascript">
 

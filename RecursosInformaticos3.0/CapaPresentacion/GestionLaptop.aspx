@@ -15,7 +15,7 @@
                             <label>SERIE DEL EQUIPO</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtSerieEquipo" runat="server" Text="" CssClass="form-control" placeholder=" "></asp:TextBox>
+                            <asp:TextBox ID="txtSerie" runat="server" Text="" CssClass="form-control" placeholder=" "></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label>MARCA</label>
@@ -40,14 +40,9 @@
                             <label>SISTEMA OPERATIVO</label>                            
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txTSistemaOp" runat="server" Text="" CssClass="form-control" placeholder="Ej: 100 GB"></asp:TextBox>
+                            <asp:TextBox ID="txtSO" runat="server" Text="" CssClass="form-control" placeholder="Ej: 100 GB"></asp:TextBox>
                         </div>
-                        <div class="form-group">
-                            <label>ESTADO</label>
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="txtEstado" runat="server" Text="" CssClass="form-control" type="text" placeholder="Ej: F6-40-BB-06-5A-67"></asp:TextBox>
-                        </div>
+                        
                         <div class="form-group">
                             <label>FECHA DE COMPRA</label>
                         </div>
@@ -59,7 +54,13 @@
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txtFechaEntrega" TextMode="Date" runat="server" CssClass="form-control" type="date"></asp:TextBox>
-                        </div>                                              
+                        </div> 
+                        <div class="form-group">
+                            <label>FECHA DE ULTIMA MANTENCION</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txtFechaMantencion" TextMode="Date" runat="server" CssClass="form-control" type="date"></asp:TextBox>
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -70,8 +71,14 @@
                             <label>NOMBRE DEL EQUIPO</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtNombreE" runat="server" Text="" CssClass="form-control" placeholder="LAPT-YHADFEG"></asp:TextBox>
-                        </div>                       
+                            <asp:TextBox ID="txtNombreEquipo" runat="server" Text="" CssClass="form-control" placeholder="LAPT-YHADFEG"></asp:TextBox>
+                        </div>  
+                        <div class="form-group">
+                            <label>ESTADO</label>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="txtEstado" runat="server" Text="" CssClass="form-control" type="text" placeholder="Ej: F6-40-BB-06-5A-67"></asp:TextBox>
+                        </div>
                         <div class="form-group">
                             <label>MODELO</label>
                         </div>
@@ -101,23 +108,13 @@
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txtOpcional" runat="server" Text="" CssClass="form-control" type="text" placeholder="Ej: 1475154154"></asp:TextBox>
-                        </div>          
-
-                        <div class="form-group">
-                            <label>FECHA DE ULTIMA MANTENCION</label>
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="txtFechaMantencion" TextMode="Date" runat="server" CssClass="form-control" type="date"></asp:TextBox>
-                        </div> 
+                        </div>                                  
                         <div class="form-group">
                             <label>COMENTARIOS</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtComentarios" runat="server" Text="" CssClass="form-control" type="text" placeholder="Ej: 1475154154"></asp:TextBox>
-                        </div>  
-                         
-
-
+                            <asp:TextBox ID="txtComentario" runat="server" Text="" CssClass="form-control" type="text" placeholder="Ej: 1475154154"></asp:TextBox>
+                        </div>                           
                     </div>
                 </div>
             </div>               
@@ -136,13 +133,8 @@
                 </tr>
             </table>
         </div>
-    </section>
-
-    
-
-
-    
-
+        
+    </section>        
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
 </asp:Content>

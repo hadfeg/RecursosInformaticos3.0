@@ -10,6 +10,6 @@
 namespace CapaPresentacion {
     
     
-    public partial class ListarUsuarios {
+    public partial class ListadoUsuarios {
     }
 }

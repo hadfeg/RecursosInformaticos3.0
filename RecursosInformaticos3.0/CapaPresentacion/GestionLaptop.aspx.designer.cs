@@ -13,13 +13,13 @@ namespace CapaPresentacion {
     public partial class GestionarLaptop {
         
         /// <summary>
-        /// Control txtSerieEquipo.
+        /// Control txtSerie.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSerieEquipo;
+        protected global::System.Web.UI.WebControls.TextBox txtSerie;
         
         /// <summary>
         /// Control txtMarca.
@@ -49,22 +49,13 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtHDD;
         
         /// <summary>
-        /// Control txTSistemaOp.
+        /// Control txtSO.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txTSistemaOp;
-        
-        /// <summary>
-        /// Control txtEstado.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEstado;
+        protected global::System.Web.UI.WebControls.TextBox txtSO;
         
         /// <summary>
         /// Control txtFechaCompra.
@@ -85,13 +76,31 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtFechaEntrega;
         
         /// <summary>
-        /// Control txtNombreE.
+        /// Control txtFechaMantencion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreE;
+        protected global::System.Web.UI.WebControls.TextBox txtFechaMantencion;
+        
+        /// <summary>
+        /// Control txtNombreEquipo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNombreEquipo;
+        
+        /// <summary>
+        /// Control txtEstado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEstado;
         
         /// <summary>
         /// Control txtModelo.
@@ -139,22 +148,13 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtOpcional;
         
         /// <summary>
-        /// Control txtFechaMantencion.
+        /// Control txtComentario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFechaMantencion;
-        
-        /// <summary>
-        /// Control txtComentarios.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtComentarios;
+        protected global::System.Web.UI.WebControls.TextBox txtComentario;
         
         /// <summary>
         /// Control btnRegistrar.

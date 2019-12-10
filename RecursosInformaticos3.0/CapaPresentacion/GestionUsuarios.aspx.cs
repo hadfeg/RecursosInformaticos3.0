@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 
 using CapaEntidades;
 using CapaLogicaNegocio;
@@ -68,10 +69,9 @@ namespace CapaPresentacion
             }
             catch (Exception)
             {
+
             }
             return validacion;
-
-
         }
 
         private Usuario GetEntity()
@@ -83,26 +83,30 @@ namespace CapaPresentacion
             objUsuario.LastName = txtApellido.Text;
             objUsuario.Rut = txtRut.Text;
             objUsuario.Mail = txtEmail.Text;
-            //objUsuario.Rol = Convert.ToInt32(ddlPerfil.SelectedValue);
-            //objUsuario.Estado = Convert.ToInt32(ddlEstado.SelectedValue);
+            objUsuario.Rol = Convert.ToInt32(ddlPerfil.SelectedValue);
+            objUsuario.Estado = 1; // Se asume que al ingresar usuario esta Activo.
             objUsuario.Pass = txtContrasena.Text;
+            
+            if (UsrImg.PostedFile != null) {
+                
+                String formato = Path.GetExtension(UsrImg.PostedFile.FileName);
 
-            /**
-            if (NivelAcceso == 1)
-            {
-                objUsuario.Cliente = "TODOS";
-                objUsuario.Contrato = "TODOS";
-            }
-            if (NivelAcceso == 2)
-            {
-                objUsuario.Cliente = ddlAcceso.SelectedItem.Text;
-                objUsuario.Contrato = "0";
-            }
-            if (NivelAcceso == 3)
-            {
-                objUsuario.Cliente = "0";
-                objUsuario.Contrato = ddlAcceso.SelectedItem.Text;
-            }**/
+                if ( formato != ".jpg" && formato != ".jpeg" && formato != ".png" )
+                {
+                    LabUploadMessage.Text = ("Estimad@, solo se permiten formatos jpg, jpeg y png, intente nuevamente !!");
+                    LabUploadMessage.ForeColor = System.Drawing.Color.Red;
+                }
+                else
+                {
+                    LabUploadMessage.Text = ("Formato de imagen correcto !!");
+                    LabUploadMessage.ForeColor = System.Drawing.Color.Green;
+                }
+
+                String img = Path.GetFileName(UsrImg.PostedFile.FileName);
+                UsrImg.SaveAs(Server.MapPath("~/UserImages/") + img);
+                objUsuario.UsrImage = "~/UserImages/" + UsrImg.PostedFile.FileName;
+
+            }            
             return objUsuario;
         }
 

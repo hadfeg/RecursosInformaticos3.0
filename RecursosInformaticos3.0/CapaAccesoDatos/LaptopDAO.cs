@@ -48,7 +48,9 @@ namespace CapaAccesoDatos
                 cmd.Parameters.AddWithValue("@prmRam", objLaptop.Ram);
                 cmd.Parameters.AddWithValue("@prmHDD", objLaptop.HDD);
                 cmd.Parameters.AddWithValue("@prmComentario", objLaptop.Comentario);
+                cmd.Parameters.AddWithValue("@prmOpcional", objLaptop.Opcional);
                 cmd.Parameters.AddWithValue("@prmEstado", objLaptop.Estado);
+                cmd.Parameters.AddWithValue("@prmSO", objLaptop.SistOperativo);
                 con.Open();
 
                 int filas = cmd.ExecuteNonQuery();

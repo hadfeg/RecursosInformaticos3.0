@@ -16,10 +16,10 @@ namespace CapaEntidades
         public int Rol { get; set; }
         public String Mail { get; set; }
         public int Estado { get; set; }
-
+        public String UsrImage { get; set; }
 
         public Usuario() { }
-        public Usuario(String Rut, String User, String Pass, String Name, String LastName, int Rol, String Mail, int Estado)
+        public Usuario(String Rut, String User, String Pass, String Name, String LastName, int Rol, String Mail, int Estado,String UsrImage)
         {
             this.Rut = Rut;
             this.User = User;
@@ -29,7 +29,7 @@ namespace CapaEntidades
             this.Rol = Rol;
             this.Mail = Mail;
             this.Estado = Estado;
-                       
+            this.UsrImage = UsrImage;
         }
 
     }
