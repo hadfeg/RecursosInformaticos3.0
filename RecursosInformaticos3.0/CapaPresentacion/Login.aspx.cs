@@ -81,7 +81,6 @@ namespace CapaPresentacion
 
         private Usuario EncontrarUsuario(string Usuario, string Contrasena)
         {
-
             Usuario objUsuario = UsuarioLN.getInstance().AccesoSistema(Usuario, Contrasena);
             if (objUsuario != null)
             {
@@ -93,8 +92,6 @@ namespace CapaPresentacion
                 return null;
                 
             }
-
-
         }
 
         private String EncontrarRut(string Usuario, string Contrasena)

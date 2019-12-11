@@ -94,6 +94,24 @@ namespace CapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtContrasena;
         
         /// <summary>
+        /// Control txtContrasena2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtContrasena2;
+        
+        /// <summary>
+        /// Control validadorContrasenas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator validadorContrasenas;
+        
+        /// <summary>
         /// Control UsrImg_Update.
         /// </summary>
         /// <remarks>
@@ -110,6 +128,15 @@ namespace CapaPresentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload UsrImg_Up;
+        
+        /// <summary>
+        /// Control LabUpdateImg.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabUpdateImg;
         
         /// <summary>
         /// Control btnActualizar.

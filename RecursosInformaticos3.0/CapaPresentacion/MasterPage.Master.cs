@@ -22,6 +22,13 @@ namespace CapaPresentacion
                 this.user_image3.ImageUrl = Convert.ToString(Session["Image"]);
                 this.user_image4.ImageUrl = Convert.ToString(Session["Image"]);
             }
+            else
+            {
+
+
+                Response.Write("<script>window.alert('Acceso denegado, usted no se ha autenticado !');</script>");
+                Response.Redirect("Login.aspx");
+            }
         }
 
         public Label usrName()

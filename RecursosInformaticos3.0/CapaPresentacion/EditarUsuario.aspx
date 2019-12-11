@@ -5,22 +5,20 @@
 
    <section>
         <br/>
-        <h2 style="text-align: center">Actualización de Datos</h2>
+        <h2 style="text-align: center">ACTUALIZACIÓN DE DATOS</h2>
     </section>
     <section class="content">
 
         <div class="row">
             <div class="col-md-6">
                 <div class="box box-primary">
-                    <div class="box-body">                       
-
+                    <div class="box-body">
                         <div class="form-group">
                             <label>NOMBRES</label>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txtNombre" runat="server" Text="" CssClass="form-control" placeholder="Ej: María"></asp:TextBox>
                         </div>
-
                         <div class="form-group">
                             <label>APELLIDOS</label>
                         </div>
@@ -37,7 +35,6 @@
                                 Display="Dynamic" ErrorMessage="Correo inválido"></asp:RegularExpressionValidator>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmail" ForeColor="Red" Display="Dynamic" ErrorMessage="Campo Obligatorio"></asp:RequiredFieldValidator>
                         </div>
-
                         <div class="form-group">
                                 <label>EMPRESA</label>
                             </div>
@@ -65,8 +62,15 @@
                                 <asp:TextBox ID="txtContrasena" runat="server" Text="" CssClass="form-control" type="password" placeholder="Password"></asp:TextBox>
                             </div>
 
-
-
+                            <div class="form-group">
+                                <label>CONFIRMAR CONTRASEÑA</label>
+                            </div>
+                            <div class="form-group">
+                                <asp:TextBox ID="txtContrasena2" runat="server" Text="" CssClass="form-control" type="password" placeholder="Password"></asp:TextBox>
+                            </div>  
+                            
+                            <asp:CustomValidator ID="validadorContrasenas" runat="server" ForeColor="Red" ClientValidationFunction="validarContrasenas" ControlToValidate="txtContrasena2" Display="Dynamic" ErrorMessage="Estimad@, las contraseñas no coinciden, intente nuevamente!!!!" SetFocusOnError="True"></asp:CustomValidator>
+                        <br />
                     </div>
                 </div>
             </div>
@@ -74,18 +78,17 @@
                 <div class="box box-primary">
                     <div class="box-body">
 
-
-                        <div class="form-group">
+                        <div class="form-group" align = "center">
                             <label>IMAGEN</label>
                         </div>
-                        <div class="form-group">
-                            <asp:Image ID="UsrImg_Update" runat="server" Height="450px" Width="320px" Text="" CssClass="form-control"></asp:Image>
+                        <div class="form-group" align ="center">
+                            <asp:Image ID="UsrImg_Update" runat="server" Height="450px" Width="300px" ImageAlign="Middle" Text="" CssClass="form-control"></asp:Image>
                         </div>
-
-                        <div class="form-group">
+                        <div class="form-group" align ="center">
                             <asp:FileUpload ID="UsrImg_Up" Text="Cambiar Imagen" runat="server" width="400px" CssClass ="form-control"/>
-                        </div>
-                                                                                                   
+                        </div>    
+                        <asp:Label ID ="LabUpdateImg" runat="server"></asp:Label>
+
                      </div>
                  </div>
                </div>               
@@ -95,16 +98,34 @@
             <table>
                 <tr>
                     <td>
-                        <asp:Button ID="btnActualizar" runat="server" CssClass="btn btn-primary" Width="200px" Text="Actualizar" OnClick="btnActualizar_Click" />
+                        <asp:Button ID="btnActualizar" runat="server" CssClass="btn btn-primary" Width="200px" Text="Actualizar" OnClick="btnActualizar_Click" OnClientClick ="botonConfirmar()"/>
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>
-                        <asp:Button ID="btn_Cancelar" runat="server" CssClass="btn btn-danger" Width="200px" Text="Cancelar" OnClick="btn_Cancelar_Click" />
+                        <asp:Button ID="btn_Cancelar" runat="server" CssClass="btn btn-danger" Width="200px" Text="Cancelar" OnClick="btn_Cancelar_Click" OnClientClick ="botonConfirmar()" />
                     </td>
                 </tr>
             </table>
         </div>
     
+        <script>
+
+                function validarContrasenas(source,arguments){
+
+                    var contrasena1 = document.getElementById("<%= txtContrasena.ClientID %>").value;
+                    var contrasena2 = document.getElementById("<%= txtContrasena2.ClientID %>").value;
+                    
+                    if(contrasena2 != contrasena1){                            
+                            arguments.IsValid = false;
+                    }else{
+                            arguments.IsValid = true;
+                    }
+                }
+
+                function botonConfirmar(){
+                    return confirm("¿Quiere confirmar la accion anterior?")
+                }
+        </script>
         
     </section>        
 

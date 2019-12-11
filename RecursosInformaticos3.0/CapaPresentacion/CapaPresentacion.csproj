@@ -6872,6 +6872,7 @@
     <Content Include="scripts\jquery-3.4.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="EditarUsuario.aspx" />
+    <Content Include="Logout.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GestionLaptop.aspx.cs">
@@ -6923,6 +6924,13 @@
     </Compile>
     <Compile Include="EditarUsuario.aspx.designer.cs">
       <DependentUpon>EditarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

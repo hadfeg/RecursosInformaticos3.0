@@ -63,7 +63,7 @@
                             <label>USUARIO</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtUsuario" runat="server" Text="" CssClass="form-control" placeholder="Ej: AFARIAS"></asp:TextBox>
+                            <asp:TextBox ID="txtUsuario" runat="server" Text="" CssClass="form-control" placeholder="Ej:AFARIAS"></asp:TextBox>
                         </div>
 
                         <div class="form-group">
@@ -103,9 +103,7 @@
                 </div>
             </div>
         </div>
-
         
-
         <div align="center">
             <table>
                 <tr>

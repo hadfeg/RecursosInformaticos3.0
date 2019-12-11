@@ -17,6 +17,12 @@ namespace CapaPresentacion
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Session["id"] == null)
+            {
+                Response.Redirect("Login.aspx");
+
+            }
+
         }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
